@@ -1,10 +1,11 @@
 ---
 title: 安装Docker Desktop
 date: 2025/2/7
+update: 2025/2/18
 categories:
   - 学习笔记
 ---
-最近看到很多开源项目会在 GitHub 上提供 Docker 支持，在试着使用的过程，我感受到docker工具的魅力。所以记录下Docker Desktop的安装并给出一些可用的配置。
+最近看到很多开源项目会在 GitHub 上提供 Docker 支持，在试着使用的过程，我感受到docker工具的魅力。所以记录下Docker Desktop的安装并给出一些可用的配置。(但其实我后续还是使用了docker engine)
 <!-- more -->
 
 # 说明
@@ -74,3 +75,7 @@ sudo apt-get install ./docker-desktop-amd64.deb
 <img src="/images/Ubuntu/docker_mirros.png" alt="docker_mirros" width="1000">
 
 设置好后，如果可以 sign in 或者可以 pull hello-world 镜像那就说明没有问题啦。
+
+# 新增的结束语
+
+**在ubuntu系统下，发现想使用docker调用gpu跑open-webui时，docker守护进程一直会和英伟达docker包相互影响，总之就是一直适配不好，所以我更换为[docker engine](https://docs.docker.com/engine/install/)使用了，发现问题很好解决，但是永远失去了GUI😭。**
